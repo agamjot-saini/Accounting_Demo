@@ -9,12 +9,12 @@ const badges = [
 
 export default function TrustBar() {
   return (
-    <section className="py-12 md:py-16 bg-white">
+    <section className="pt-8 pb-12 md:py-14 bg-white">
       <Container>
         <p className="text-sm text-[#64748B] uppercase tracking-wider font-medium mb-6 text-center">
           Trusted & Certified
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+        <div className="grid grid-cols-2 md:flex md:flex-wrap items-center justify-center gap-4 md:gap-10">
           {badges.map((badge) => (
             <div
               key={badge}
