@@ -19,11 +19,11 @@ export default function ReviewCard({ quote, author, role, rating = 5 }: ReviewCa
         ))}
       </div>
       <p className="text-[#334155] leading-7 mb-4 flex-1">
-        <span className="text-[#2563EB] font-heading text-xl font-bold mr-1">&ldquo;</span>
+        <span className="text-[#1A3C70] font-heading text-xl font-bold mr-1">&ldquo;</span>
         {quote}
       </p>
       <div>
-        <p className="font-heading font-semibold text-[#0F172A]">{author}</p>
+        <p className="font-heading font-semibold text-[#112854]">{author}</p>
         <p className="text-sm text-[#64748B]">{role}</p>
       </div>
     </div>

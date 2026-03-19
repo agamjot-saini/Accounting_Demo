@@ -39,9 +39,9 @@ interface FormErrors {
   serviceNeeded?: string;
 }
 
-const inputClasses = 'w-full rounded-xl border border-[#E2E8F0] bg-white px-4 py-3 text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#93C5FD] focus:border-transparent transition-all font-body';
-const inputErrorClasses = 'w-full rounded-xl border border-[#FCA5A5] bg-white px-4 py-3 text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#FCA5A5] focus:border-transparent transition-all font-body';
-const labelClasses = 'block text-sm font-medium text-[#0F172A] mb-1.5 font-heading';
+const inputClasses = 'w-full rounded-xl border border-[#E2E8F0] bg-white px-4 py-3 text-[#112854] placeholder:text-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#93C5FD] focus:border-transparent transition-all font-body';
+const inputErrorClasses = 'w-full rounded-xl border border-[#FCA5A5] bg-white px-4 py-3 text-[#112854] placeholder:text-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#FCA5A5] focus:border-transparent transition-all font-body';
+const labelClasses = 'block text-sm font-medium text-[#112854] mb-1.5 font-heading';
 
 export default function GetStarted() {
   const [formData, setFormData] = useState<FormData>({
@@ -116,20 +116,20 @@ export default function GetStarted() {
                 <div className="w-12 h-12 rounded-full bg-[#ECFDF5] text-[#059669] flex items-center justify-center mb-5">
                   <CheckCircle className="w-6 h-6" />
                 </div>
-                <h2 className="font-heading text-2xl md:text-3xl font-extrabold text-[#0F172A] mb-4">
+                <h2 className="font-heading text-2xl md:text-3xl font-extrabold text-[#112854] mb-4">
                   Thank you! Here's what happens next.
                 </h2>
                 <div className="space-y-4 mb-8">
                   <div className="flex gap-3">
-                    <span className="w-7 h-7 rounded-full bg-[#EFF6FF] text-[#1A3C70] flex items-center justify-center flex-shrink-0 text-sm font-bold font-heading">1</span>
+                    <span className="w-7 h-7 rounded-full bg-[#EEF2F9] text-[#1A3C70] flex items-center justify-center flex-shrink-0 text-sm font-bold font-heading">1</span>
                     <p className="text-[#334155] leading-7">We'll review your request and respond within 24 hours.</p>
                   </div>
                   <div className="flex gap-3">
-                    <span className="w-7 h-7 rounded-full bg-[#EFF6FF] text-[#1A3C70] flex items-center justify-center flex-shrink-0 text-sm font-bold font-heading">2</span>
+                    <span className="w-7 h-7 rounded-full bg-[#EEF2F9] text-[#1A3C70] flex items-center justify-center flex-shrink-0 text-sm font-bold font-heading">2</span>
                     <p className="text-[#334155] leading-7">We'll let you know exactly which documents to email to [BUSINESS_EMAIL].</p>
                   </div>
                   <div className="flex gap-3">
-                    <span className="w-7 h-7 rounded-full bg-[#EFF6FF] text-[#1A3C70] flex items-center justify-center flex-shrink-0 text-sm font-bold font-heading">3</span>
+                    <span className="w-7 h-7 rounded-full bg-[#EEF2F9] text-[#1A3C70] flex items-center justify-center flex-shrink-0 text-sm font-bold font-heading">3</span>
                     <p className="text-[#334155] leading-7">Once we have everything, we'll begin the work and keep you informed.</p>
                   </div>
                 </div>
@@ -146,7 +146,7 @@ export default function GetStarted() {
               </div>
             ) : (
               <div className="rounded-2xl bg-white border border-[#E2E8F0] p-8 md:p-10 shadow-[0_4px_16px_rgba(15,23,42,0.04)]">
-                <h1 className="font-heading text-3xl md:text-4xl font-extrabold tracking-tight text-[#0F172A] mb-2">
+                <h1 className="font-heading text-3xl md:text-4xl font-extrabold tracking-tight text-[#112854] mb-2">
                   Get Started
                 </h1>
                 <p className="text-[#64748B] leading-7 mb-8">
@@ -265,7 +265,7 @@ export default function GetStarted() {
 
           <div className="lg:col-span-2 space-y-5">
             <div className="rounded-2xl bg-white border border-[#E2E8F0] p-6 shadow-[0_4px_16px_rgba(15,23,42,0.04)]">
-              <h3 className="font-heading font-bold text-[#0F172A] mb-4">Why [FIRM_NAME]?</h3>
+              <h3 className="font-heading font-bold text-[#112854] mb-4">Why [FIRM_NAME]?</h3>
               <ul className="space-y-3">
                 {[
                   'Response within 24 hours',
@@ -282,10 +282,10 @@ export default function GetStarted() {
 
             <div className="rounded-2xl bg-white border border-[#E2E8F0] p-6 shadow-[0_4px_16px_rgba(15,23,42,0.04)]">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-9 h-9 rounded-lg bg-[#EFF6FF] text-[#1A3C70] flex items-center justify-center">
+                <div className="w-9 h-9 rounded-lg bg-[#EEF2F9] text-[#1A3C70] flex items-center justify-center">
                   <Phone className="w-4 h-4" />
                 </div>
-                <h3 className="font-heading font-bold text-[#0F172A]">Prefer to Call?</h3>
+                <h3 className="font-heading font-bold text-[#112854]">Prefer to Call?</h3>
               </div>
               <a
                 href="tel:[BUSINESS_PHONE]"
@@ -300,10 +300,10 @@ export default function GetStarted() {
 
             <div className="rounded-2xl bg-white border border-[#E2E8F0] p-6 shadow-[0_4px_16px_rgba(15,23,42,0.04)]">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-9 h-9 rounded-lg bg-[#EFF6FF] text-[#1A3C70] flex items-center justify-center">
+                <div className="w-9 h-9 rounded-lg bg-[#EEF2F9] text-[#1A3C70] flex items-center justify-center">
                   <Clock className="w-4 h-4" />
                 </div>
-                <h3 className="font-heading font-bold text-[#0F172A]">Office Hours</h3>
+                <h3 className="font-heading font-bold text-[#112854]">Office Hours</h3>
               </div>
               <p className="text-sm text-[#334155]">[BUSINESS_HOURS]</p>
             </div>

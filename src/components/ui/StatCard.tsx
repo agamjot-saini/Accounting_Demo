@@ -39,7 +39,7 @@ export default function StatCard({
         </div>
         <p className="text-[11px] font-semibold text-[#64748B] uppercase tracking-widest leading-tight">{title}</p>
       </div>
-      <p className="font-heading text-[26px] font-extrabold text-[#0F172A] leading-none mb-1">{value}</p>
+      <p className="font-heading text-[26px] font-extrabold text-[#112854] leading-none mb-1">{value}</p>
       <p className="text-[11px] text-[#94A3B8]">{subtitle}</p>
     </div>
   );

@@ -32,10 +32,10 @@ export default function WhyChooseUs() {
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-10">
           {features.map((feature) => (
             <div key={feature.title} className="text-center">
-              <div className="w-12 h-12 rounded-xl bg-[#EFF6FF] text-[#1E40AF] flex items-center justify-center ring-1 ring-[#DBEAFE] mx-auto mb-5">
+              <div className="w-12 h-12 rounded-xl bg-[#EEF2F9] text-[#1A3C70] flex items-center justify-center ring-1 ring-[#C9D5EA] mx-auto mb-5">
                 <feature.icon className="w-5 h-5" />
               </div>
-              <h3 className="font-heading font-bold text-lg text-[#0F172A] mb-2">{feature.title}</h3>
+              <h3 className="font-heading font-bold text-lg text-[#112854] mb-2">{feature.title}</h3>
               <p className="text-[#64748B] leading-7">{feature.description}</p>
             </div>
           ))}

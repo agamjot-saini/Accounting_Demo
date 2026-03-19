@@ -20,7 +20,7 @@ export default function ProcessStep({ number, title, description, isLast = false
         )}
       </div>
       <div className={`pb-10 ${isLast ? 'pb-0' : ''}`}>
-        <h3 className="font-heading font-bold text-lg text-[#0F172A] mb-2">{title}</h3>
+        <h3 className="font-heading font-bold text-lg text-[#112854] mb-2">{title}</h3>
         <p className="text-[#64748B] leading-7">{description}</p>
       </div>
     </div>

@@ -34,7 +34,7 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
               aria-expanded={isOpen}
               aria-controls={panelId}
               onClick={() => toggle(index)}
-              className="w-full flex items-center justify-between text-left p-5 font-heading font-semibold text-[#0F172A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#93C5FD] focus-visible:ring-offset-2"
+              className="w-full flex items-center justify-between text-left p-5 font-heading font-semibold text-[#112854] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#93C5FD] focus-visible:ring-offset-2"
             >
               <span className="pr-4">{item.question}</span>
               <ChevronDown

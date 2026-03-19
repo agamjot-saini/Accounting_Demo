@@ -28,7 +28,7 @@ export default function Footer() {
           <div>
             <Link
               to="/"
-              className="font-heading font-extrabold text-xl text-[#0F172A] tracking-tight"
+              className="font-heading font-extrabold text-xl text-[#112854] tracking-tight"
             >
               [FIRM_NAME]<span className="text-[#D4A843]">.</span>
             </Link>
@@ -38,13 +38,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-heading font-bold text-sm text-[#0F172A] mb-4">Services</h4>
+            <h4 className="font-heading font-bold text-sm text-[#112854] mb-4">Services</h4>
             <ul className="space-y-2.5">
               {serviceLinks.map((link) => (
                 <li key={link.label}>
                   <Link
                     to={link.to}
-                    className="text-sm text-[#64748B] hover:text-[#0F172A] transition-colors"
+                    className="text-sm text-[#64748B] hover:text-[#112854] transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -54,13 +54,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-heading font-bold text-sm text-[#0F172A] mb-4">Quick Links</h4>
+            <h4 className="font-heading font-bold text-sm text-[#112854] mb-4">Quick Links</h4>
             <ul className="space-y-2.5">
               {quickLinks.map((link) => (
                 <li key={link.label}>
                   <Link
                     to={link.to}
-                    className="text-sm text-[#64748B] hover:text-[#0F172A] transition-colors"
+                    className="text-sm text-[#64748B] hover:text-[#112854] transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -70,12 +70,12 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-heading font-bold text-sm text-[#0F172A] mb-4">Contact</h4>
+            <h4 className="font-heading font-bold text-sm text-[#112854] mb-4">Contact</h4>
             <ul className="space-y-2.5 text-sm text-[#64748B]">
               <li>
                 <a
                   href="tel:[BUSINESS_PHONE]"
-                  className="hover:text-[#0F172A] transition-colors"
+                  className="hover:text-[#112854] transition-colors"
                 >
                   [BUSINESS_PHONE]
                 </a>
@@ -83,7 +83,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:[BUSINESS_EMAIL]"
-                  className="hover:text-[#0F172A] transition-colors"
+                  className="hover:text-[#112854] transition-colors"
                 >
                   [BUSINESS_EMAIL]
                 </a>
@@ -103,7 +103,7 @@ export default function Footer() {
             href="[GOOGLE_BUSINESS_PROFILE_LINK]"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs text-[#64748B] hover:text-[#0F172A] transition-colors"
+            className="text-xs text-[#64748B] hover:text-[#112854] transition-colors"
           >
             Google Business Profile
           </a>

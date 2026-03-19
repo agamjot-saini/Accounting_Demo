@@ -38,7 +38,7 @@ export default function HeroSection() {
               <StatCard
                 icon={FileCheck}
                 iconColor="#1A3C70"
-                iconBg="#EFF6FF"
+                iconBg="#EEF2F9"
                 title="Returns Filed"
                 value="[X]+"
                 subtitle="Personal & corporate"
@@ -49,12 +49,12 @@ export default function HeroSection() {
 
           {/* Centre text */}
           <div className="flex-1 text-center px-2">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#EFF6FF] text-[#1A3C70] ring-1 ring-[#DBEAFE] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.1em] mb-7">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#EEF2F9] text-[#1A3C70] ring-1 ring-[#C9D5EA] px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.1em] mb-7">
               <span className="w-1.5 h-1.5 rounded-full bg-[#D4A843]" />
               Proudly Serving the GTA Since [X]
             </span>
 
-            <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] text-[#0F172A] mb-4">
+            <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] text-[#112854] mb-4">
               Trusted Tax & Accounting
               <br />
               for Individuals & Businesses
@@ -71,7 +71,7 @@ export default function HeroSection() {
                 className="inline-flex items-center justify-center gap-2 rounded-xl text-white font-semibold font-heading px-7 py-3.5 min-h-[48px] text-[15px] shadow-[0_8px_24px_rgba(26,60,112,0.22)] hover:shadow-[0_12px_32px_rgba(26,60,112,0.30)] active:translate-y-[1px] transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A3C70]/40 focus-visible:ring-offset-2"
                 style={{ backgroundImage: 'linear-gradient(180deg, #1E4A8C 0%, #153160 100%)' }}
               >
-                Get Started &rarr;
+                Get Started
               </Link>
               <Link
                 to="/services"
@@ -98,7 +98,7 @@ export default function HeroSection() {
                   {[1,2,3,4,5].map(i => (
                     <Star key={i} className="w-3.5 h-3.5 fill-[#D4A843] text-[#D4A843]" />
                   ))}
-                  <span className="ml-1 text-sm font-bold text-[#0F172A]">5.0</span>
+                  <span className="ml-1 text-sm font-bold text-[#112854]">5.0</span>
                 </div>
                 <p className="text-sm text-[#64748B]">Trusted by individuals and businesses across the GTA</p>
               </div>
