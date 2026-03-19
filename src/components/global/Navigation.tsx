@@ -55,8 +55,8 @@ export default function Navigation() {
       <header
         className={`fixed top-0 w-full z-50 transition-all duration-300 ease-in-out ${
           scrolled
-            ? 'bg-[#1A3C70] shadow-[0_4px_24px_rgba(15,23,42,0.22)] border-b border-white/5'
-            : 'bg-[#1A3C70] backdrop-blur-md border-b border-white/10'
+            ? 'bg-[#1A3C70] shadow-[0_8px_32px_rgba(15,23,42,0.35)] border-b border-white/10'
+            : 'bg-[#1A3C70]/95 backdrop-blur-md border-b border-white/5'
         }`}
       >
         <Container>
@@ -96,12 +96,10 @@ export default function Navigation() {
             <div className="hidden lg:flex lg:items-center">
               <Link
                 to="/get-started"
-                className="group flex flex-col items-center gap-0 px-3 py-1 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#1A3C70]"
+                className="group inline-flex items-center gap-2 rounded-xl font-semibold font-heading px-5 py-2.5 text-[13px] text-[#112347] transition-all duration-200 hover:bg-white/90 active:scale-[0.98] shadow-[0_2px_12px_rgba(255,255,255,0.15)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#1A3C70] bg-white"
               >
-                <span className="text-[11px] font-bold tracking-[0.18em] uppercase text-white/90 group-hover:text-white transition-colors duration-200">
-                  Get Started
-                </span>
-                <MoveRight className="w-[18px] h-[18px] text-[#D4A843] transition-transform duration-300 ease-out group-hover:translate-x-2" />
+                Get Started
+                <MoveRight className="w-4 h-4 transition-transform duration-300 ease-out group-hover:translate-x-1" />
               </Link>
             </div>
 
@@ -137,13 +135,8 @@ export default function Navigation() {
               </button>
             </div>
 
-            {/* Tagline */}
-            <p className="px-6 pt-6 pb-2 text-xs font-semibold tracking-[0.2em] uppercase text-[#D4A843]/80">
-              Navigation
-            </p>
-
             {/* Nav Links */}
-            <nav className="flex flex-col px-4 gap-1">
+            <nav className="flex flex-col px-4 gap-1 pt-4">
               {navLinks.map((link) => {
                 const isActive = location.pathname === link.to;
                 return (
@@ -175,8 +168,7 @@ export default function Navigation() {
             <div className="p-6">
               <Link
                 to="/get-started"
-                className="w-full inline-flex items-center justify-center gap-2 rounded-xl font-semibold font-heading px-6 py-4 min-h-[52px] text-[15px] text-[#112347] transition-all duration-200 hover:brightness-110 active:scale-[0.98] shadow-[0_4px_20px_rgba(212,168,67,0.35)]"
-                style={{ background: '#D4A843' }}
+                className="w-full inline-flex items-center justify-center gap-2 rounded-xl font-semibold font-heading px-6 py-4 min-h-[52px] text-[15px] text-[#112347] bg-white transition-all duration-200 hover:bg-white/90 active:scale-[0.98] shadow-[0_2px_12px_rgba(255,255,255,0.15)]"
               >
                 Get Started
                 <MoveRight className="w-4 h-4" />
