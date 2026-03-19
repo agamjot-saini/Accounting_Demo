@@ -238,7 +238,7 @@ export default function Services() {
         <section
           key={service.title}
           id={service.slug}
-          className={`py-16 md:py-20 lg:py-24 scroll-mt-[72px] ${index % 2 === 0 ? 'bg-[#F8FAFC]' : 'bg-white'}`}
+          className={`py-16 md:py-20 lg:py-24 scroll-mt-[2px] ${index % 2 === 0 ? 'bg-[#F8FAFC]' : 'bg-white'}`}
         >
           <Container>
             <ServiceDetail {...service} />
