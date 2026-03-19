@@ -120,7 +120,7 @@ export default function Navigation() {
             className="absolute inset-0 bg-[#0F172A]/60 backdrop-blur-sm"
             onClick={closeMobile}
           />
-          <div className="absolute right-0 top-0 h-full w-[300px] flex flex-col" style={{ background: 'linear-gradient(160deg, #ffffff 0%, #EEF4FF 100%)' }}>
+          <div className="animate-slideInRight absolute right-0 top-0 h-full w-[300px] flex flex-col" style={{ background: 'linear-gradient(160deg, #ffffff 0%, #EEF4FF 100%)' }}>
             {/* Header */}
             <div className="h-16 flex items-center justify-between px-6 border-b border-slate-100">
               <span className="font-heading font-extrabold text-lg text-[#1A3C70]">
@@ -128,7 +128,7 @@ export default function Navigation() {
               </span>
               <button
                 onClick={closeMobile}
-                className="p-2 rounded-lg text-slate-400 hover:text-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300 transition-colors"
+                className="p-2.5 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300 transition-colors"
                 aria-label="Close menu"
               >
                 <X className="w-5 h-5" />
@@ -145,8 +145,8 @@ export default function Navigation() {
                     to={link.to}
                     className={`group relative flex items-center gap-3 px-4 py-4 rounded-xl text-[17px] font-medium transition-all duration-200 ${
                       isActive
-                        ? 'text-[#1A3C70] bg-[#1A3C70]/8 font-semibold'
-                        : 'text-slate-500 hover:text-[#1A3C70] hover:bg-slate-100/80'
+                        ? 'text-[#1A3C70] bg-blue-50 font-semibold'
+                        : 'text-slate-700 hover:text-[#1A3C70] hover:bg-slate-100/80'
                     }`}
                   >
                     {/* Gold dot for active */}
