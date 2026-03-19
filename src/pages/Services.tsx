@@ -37,16 +37,18 @@ function ServiceDetail({ title, description, includes, icon: Icon, reversed = fa
             </li>
           ))}
         </ul>
-        <Link
-          to="/get-started"
-          className="inline-flex items-center justify-center gap-2 rounded-xl text-white font-semibold font-heading px-6 py-3.5 min-h-[48px] text-[15px] shadow-[0_10px_24px_rgba(26,60,112,0.22)] hover:shadow-[0_14px_30px_rgba(26,60,112,0.30)] active:translate-y-[1px] transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#93C5FD] focus-visible:ring-offset-2"
-          style={{ backgroundImage: 'linear-gradient(180deg, #1E4A8C 0%, #153160 100%)' }}
-        >
-          Get Started
-          <ArrowRight className="w-4 h-4" />
-        </Link>
+        <div className="flex justify-center lg:justify-start">
+          <Link
+            to="/get-started"
+            className="inline-flex items-center justify-center gap-2 rounded-xl text-white font-semibold font-heading px-6 py-3.5 min-h-[48px] text-[15px] shadow-[0_10px_24px_rgba(26,60,112,0.22)] hover:shadow-[0_14px_30px_rgba(26,60,112,0.30)] active:translate-y-[1px] transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#93C5FD] focus-visible:ring-offset-2"
+            style={{ backgroundImage: 'linear-gradient(180deg, #1E4A8C 0%, #153160 100%)' }}
+          >
+            Get Started
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
       </div>
-      <div className="lg:w-1/2">
+      <div className="hidden lg:block lg:w-1/2">
         <div className="w-full aspect-[4/3] rounded-2xl bg-[#EEF2F9] border border-[#C9D5EA] flex items-center justify-center">
           <span className="text-sm text-[#64748B] font-medium">[SERVICE_IMAGE]</span>
         </div>
@@ -240,7 +242,7 @@ export default function Services() {
         <section
           key={service.title}
           id={service.slug}
-          className={`py-16 md:py-20 lg:py-24 scroll-mt-[2px] ${index % 2 === 0 ? 'bg-[#F8FAFC]' : 'bg-white'}`}
+          className={`py-16 md:py-20 lg:py-24 scroll-mt-20 ${index % 2 === 0 ? 'bg-[#F8FAFC]' : 'bg-white'}`}
         >
           <Container>
             <ServiceDetail {...service} />

@@ -24,8 +24,8 @@ export default function Footer() {
   return (
     <footer className="bg-white border-t border-[#E2E8F0]">
       <Container className="py-12 md:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
-          <div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+          <div className="col-span-2 lg:col-span-1">
             <Link
               to="/"
               className="font-heading font-extrabold text-xl text-[#112854] tracking-tight"
@@ -37,7 +37,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div>
+          <div className="col-span-2 lg:col-span-1">
             <h4 className="font-heading font-bold text-sm text-[#112854] mb-4">Services</h4>
             <ul className="space-y-2.5">
               {serviceLinks.map((link) => (
