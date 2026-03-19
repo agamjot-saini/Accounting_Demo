@@ -120,15 +120,15 @@ export default function Navigation() {
             className="absolute inset-0 bg-[#0F172A]/60 backdrop-blur-sm"
             onClick={closeMobile}
           />
-          <div className="absolute right-0 top-0 h-full w-[300px] flex flex-col" style={{ background: 'linear-gradient(160deg, #1A3C70 0%, #0F1D3A 100%)' }}>
+          <div className="absolute right-0 top-0 h-full w-[300px] flex flex-col" style={{ background: 'linear-gradient(160deg, #ffffff 0%, #EEF4FF 100%)' }}>
             {/* Header */}
-            <div className="h-16 flex items-center justify-between px-6 border-b border-white/10">
-              <span className="font-heading font-extrabold text-lg text-white">
+            <div className="h-16 flex items-center justify-between px-6 border-b border-slate-100">
+              <span className="font-heading font-extrabold text-lg text-[#1A3C70]">
                 [FIRM_NAME]<span className="text-[#D4A843]">.</span>
               </span>
               <button
                 onClick={closeMobile}
-                className="p-2 rounded-lg text-white/60 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 transition-colors"
+                className="p-2 rounded-lg text-slate-400 hover:text-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300 transition-colors"
                 aria-label="Close menu"
               >
                 <X className="w-5 h-5" />
@@ -145,14 +145,14 @@ export default function Navigation() {
                     to={link.to}
                     className={`group relative flex items-center gap-3 px-4 py-4 rounded-xl text-[17px] font-medium transition-all duration-200 ${
                       isActive
-                        ? 'text-white bg-white/10'
-                        : 'text-white/60 hover:text-white hover:bg-white/5'
+                        ? 'text-[#1A3C70] bg-[#1A3C70]/8 font-semibold'
+                        : 'text-slate-500 hover:text-[#1A3C70] hover:bg-slate-100/80'
                     }`}
                   >
                     {/* Gold dot for active */}
                     <span
                       className={`w-1.5 h-1.5 rounded-full flex-shrink-0 transition-all duration-200 ${
-                        isActive ? 'bg-[#D4A843]' : 'bg-transparent group-hover:bg-white/30'
+                        isActive ? 'bg-[#D4A843]' : 'bg-transparent group-hover:bg-slate-300'
                       }`}
                     />
                     {link.label}
@@ -162,13 +162,13 @@ export default function Navigation() {
             </nav>
 
             {/* Divider */}
-            <div className="mx-6 mt-6 border-t border-white/10" />
+            <div className="mx-6 mt-6 border-t border-slate-200" />
 
             {/* CTA */}
             <div className="p-6">
               <Link
                 to="/get-started"
-                className="w-full inline-flex items-center justify-center gap-2 rounded-xl font-semibold font-heading px-6 py-4 min-h-[52px] text-[15px] text-[#112347] bg-white transition-all duration-200 hover:bg-white/90 active:scale-[0.98] shadow-[0_2px_12px_rgba(255,255,255,0.15)]"
+                className="w-full inline-flex items-center justify-center gap-2 rounded-xl font-semibold font-heading px-6 py-4 min-h-[52px] text-[15px] text-white bg-[#1A3C70] transition-all duration-200 hover:bg-[#163264] active:scale-[0.98] shadow-[0_2px_16px_rgba(26,60,112,0.18)]"
               >
                 Get Started
                 <MoveRight className="w-4 h-4" />
@@ -177,7 +177,7 @@ export default function Navigation() {
 
             {/* Bottom decoration */}
             <div className="mt-auto px-6 pb-8 text-center">
-              <p className="text-white/20 text-xs">Trusted financial advisors</p>
+              <p className="text-slate-400 text-xs">Trusted financial advisors</p>
             </div>
           </div>
         </div>
