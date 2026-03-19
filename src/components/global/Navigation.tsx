@@ -119,45 +119,73 @@ export default function Navigation() {
       {mobileOpen && (
         <div className="fixed inset-0 z-[60] lg:hidden">
           <div
-            className="absolute inset-0 bg-[#0F172A]/30 backdrop-blur-sm"
+            className="absolute inset-0 bg-[#0F172A]/60 backdrop-blur-sm"
             onClick={closeMobile}
           />
-          <div className="absolute right-0 top-0 h-full w-[280px] bg-white shadow-2xl flex flex-col">
-            <div className="h-16 flex items-center justify-between px-5 border-b border-[#F1F5F9]">
-              <span className="font-heading font-extrabold text-lg text-[#1A3C70]">
+          <div className="absolute right-0 top-0 h-full w-[300px] flex flex-col" style={{ background: 'linear-gradient(160deg, #1A3C70 0%, #0F1D3A 100%)' }}>
+            {/* Header */}
+            <div className="h-16 flex items-center justify-between px-6 border-b border-white/10">
+              <span className="font-heading font-extrabold text-lg text-white">
                 [FIRM_NAME]<span className="text-[#D4A843]">.</span>
               </span>
               <button
                 onClick={closeMobile}
-                className="p-2 rounded-lg text-[#475569] hover:text-[#1A3C70] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A3C70]/30"
+                className="p-2 rounded-lg text-white/60 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 transition-colors"
                 aria-label="Close menu"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
-            <nav className="flex flex-col p-5 gap-1">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  className={`px-4 py-3 rounded-xl text-sm font-medium transition-colors ${
-                    location.pathname === link.to
-                      ? 'bg-[#EFF6FF] text-[#1A3C70] font-semibold border-l-2 border-[#D4A843]'
-                      : 'text-[#475569] hover:bg-[#F8FAFC] hover:text-[#1A3C70] border-l-2 border-transparent'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
+
+            {/* Tagline */}
+            <p className="px-6 pt-6 pb-2 text-xs font-semibold tracking-[0.2em] uppercase text-[#D4A843]/80">
+              Navigation
+            </p>
+
+            {/* Nav Links */}
+            <nav className="flex flex-col px-4 gap-1">
+              {navLinks.map((link) => {
+                const isActive = location.pathname === link.to;
+                return (
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    className={`group relative flex items-center gap-3 px-4 py-4 rounded-xl text-[17px] font-medium transition-all duration-200 ${
+                      isActive
+                        ? 'text-white bg-white/10'
+                        : 'text-white/60 hover:text-white hover:bg-white/5'
+                    }`}
+                  >
+                    {/* Gold dot for active */}
+                    <span
+                      className={`w-1.5 h-1.5 rounded-full flex-shrink-0 transition-all duration-200 ${
+                        isActive ? 'bg-[#D4A843]' : 'bg-transparent group-hover:bg-white/30'
+                      }`}
+                    />
+                    {link.label}
+                  </Link>
+                );
+              })}
             </nav>
-            <div className="mt-auto p-5 border-t border-[#F1F5F9]">
+
+            {/* Divider */}
+            <div className="mx-6 mt-6 border-t border-white/10" />
+
+            {/* CTA */}
+            <div className="p-6">
               <Link
                 to="/get-started"
-                className="w-full inline-flex items-center justify-center gap-2 rounded-xl text-white font-semibold font-heading px-6 py-3.5 min-h-[48px] text-[15px] shadow-[0_4px_14px_rgba(26,60,112,0.22)] transition-all duration-200 ease-out"
-                style={{ backgroundImage: 'linear-gradient(180deg, #1E4A8C 0%, #153160 100%)' }}
+                className="w-full inline-flex items-center justify-center gap-2 rounded-xl font-semibold font-heading px-6 py-4 min-h-[52px] text-[15px] text-[#112347] transition-all duration-200 hover:brightness-110 active:scale-[0.98] shadow-[0_4px_20px_rgba(212,168,67,0.35)]"
+                style={{ background: '#D4A843' }}
               >
                 Get Started
+                <MoveRight className="w-4 h-4" />
               </Link>
+            </div>
+
+            {/* Bottom decoration */}
+            <div className="mt-auto px-6 pb-8 text-center">
+              <p className="text-white/20 text-xs">Trusted financial advisors</p>
             </div>
           </div>
         </div>
