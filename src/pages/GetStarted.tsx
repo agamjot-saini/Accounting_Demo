@@ -1,5 +1,5 @@
 import { useState, FormEvent } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ShieldCheck, Phone, Clock, CheckCircle, ArrowRight, Loader2 } from 'lucide-react';
 import Container from '../components/ui/Container';
 
@@ -29,6 +29,7 @@ interface FormData {
   serviceNeeded: string;
   taxYear: string;
   message: string;
+  referralSource: string;
 }
 
 interface FormErrors {
@@ -43,13 +44,15 @@ const inputErrorClasses = 'w-full rounded-xl border border-[#FCA5A5] bg-white px
 const labelClasses = 'block text-sm font-medium text-[#112854] mb-1.5 font-heading';
 
 export default function GetStarted() {
+  const { state } = useLocation();
   const [formData, setFormData] = useState<FormData>({
     fullName: '',
     email: '',
     phone: '',
-    serviceNeeded: '',
+    serviceNeeded: state?.serviceNeeded ?? '',
     taxYear: '',
     message: '',
+    referralSource: state?.serviceNeeded ?? '',
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);

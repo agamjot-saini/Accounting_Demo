@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { User, Building2, BookOpen, Receipt, Briefcase, DollarSign, LineChart, ArrowRight, type LucideIcon } from 'lucide-react';
 import Container from '../components/ui/Container';
 
@@ -40,6 +41,7 @@ function ServiceDetail({ title, description, includes, icon: Icon, reversed = fa
         <div className="flex justify-center lg:justify-start">
           <Link
             to="/get-started"
+            state={{ serviceNeeded: title }}
             className="inline-flex items-center justify-center gap-2 rounded-xl text-white font-semibold font-heading px-6 py-3.5 min-h-[48px] text-[15px] shadow-[0_10px_24px_rgba(26,60,112,0.22)] hover:shadow-[0_14px_30px_rgba(26,60,112,0.30)] active:translate-y-[1px] transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#93C5FD] focus-visible:ring-offset-2"
             style={{ backgroundImage: 'linear-gradient(180deg, #1E4A8C 0%, #153160 100%)' }}
           >
@@ -193,6 +195,18 @@ const services: ServiceDetailProps[] = [
 ];
 
 export default function Services() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) return;
+    const el = document.querySelector(hash);
+    if (el) {
+      const navbarHeight = 66;
+      const top = el.getBoundingClientRect().top + window.scrollY - navbarHeight;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  }, [hash]);
+
   return (
     <>
       {/* Hero */}
