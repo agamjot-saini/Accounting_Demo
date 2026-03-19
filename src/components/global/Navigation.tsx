@@ -56,7 +56,7 @@ export default function Navigation() {
         className={`fixed top-0 w-full z-50 transition-all duration-300 ease-in-out ${
           scrolled
             ? 'bg-[#1A3C70] shadow-[0_8px_32px_rgba(15,23,42,0.35)] border-b border-white/10'
-            : 'bg-[#1A3C70]/95 backdrop-blur-md border-b border-white/5'
+            : 'bg-[#1A3C70] shadow-[0_8px_32px_rgba(15,23,42,0.35)] border-b border-white/5'
         }`}
       >
         <Container>
