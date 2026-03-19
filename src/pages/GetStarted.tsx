@@ -2,7 +2,6 @@ import { useState, FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, Phone, Clock, CheckCircle, ArrowRight, Loader2 } from 'lucide-react';
 import Container from '../components/ui/Container';
-import { supabase } from '../lib/supabase';
 
 const serviceOptions = [
   'Personal Income Tax',
@@ -77,23 +76,11 @@ export default function GetStarted() {
     if (!validate()) return;
 
     setLoading(true);
-    try {
-      const { error } = await supabase.from('contact_submissions').insert({
-        full_name: formData.fullName.trim(),
-        email: formData.email.trim(),
-        phone: formData.phone.trim(),
-        service_needed: formData.serviceNeeded,
-        tax_year: formData.taxYear || null,
-        message: formData.message.trim() || null,
-      });
-
-      if (error) throw error;
+    // TODO: Replace with EmailJS
+    setTimeout(() => {
       setSubmitted(true);
-    } catch {
-      setSubmitError('Something went wrong. Please try again or call us directly.');
-    } finally {
       setLoading(false);
-    }
+    }, 500);
   };
 
   const updateField = (field: keyof FormData, value: string) => {
