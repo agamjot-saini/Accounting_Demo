@@ -6,7 +6,7 @@ import StatCard from '../ui/StatCard';
 export default function HeroSection() {
   return (
     <section
-      className="relative py-20 md:py-24 lg:py-32 overflow-hidden"
+      className="relative py-16 md:py-24 lg:py-32 overflow-hidden"
       style={{
         backgroundImage: 'radial-gradient(circle, rgba(148,186,232,0.28) 1px, transparent 1px), linear-gradient(160deg, #E8F0FB 0%, #EEF4FF 45%, #F4F8FF 75%, #F8FAFC 100%)',
         backgroundSize: '28px 28px, 100% 100%',
@@ -65,7 +65,7 @@ export default function HeroSection() {
               Personal returns, corporate filings, bookkeeping, and advisory — handled with accuracy, care, and full transparency.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-4 mb-10">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 mb-10">
               <Link
                 to="/get-started"
                 className="inline-flex items-center justify-center gap-2 rounded-xl text-white font-semibold font-heading px-7 py-3.5 min-h-[48px] text-[15px] shadow-[0_8px_24px_rgba(26,60,112,0.22)] hover:shadow-[0_12px_32px_rgba(26,60,112,0.30)] active:translate-y-[1px] transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A3C70]/40 focus-visible:ring-offset-2"
@@ -100,7 +100,7 @@ export default function HeroSection() {
                   ))}
                   <span className="ml-1 text-sm font-bold text-[#112854]">5.0</span>
                 </div>
-                <p className="text-sm text-[#64748B]">Trusted by individuals and businesses across the GTA</p>
+                <p className="text-sm text-[#64748B]">Trusted across the GTA</p>
               </div>
             </div>
           </div>
@@ -135,7 +135,7 @@ export default function HeroSection() {
       </Container>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-60">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-1 opacity-60">
         <span className="text-[10px] font-semibold tracking-[0.18em] uppercase text-[#1A3C70]">Scroll</span>
         <ChevronDown className="w-4 h-4 text-[#D4A843] animate-bounce" />
       </div>
