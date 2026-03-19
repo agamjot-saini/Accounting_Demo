@@ -15,12 +15,14 @@ function ServiceDetail({ title, description, includes, icon: Icon, reversed = fa
   return (
     <div className={`flex flex-col ${reversed ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-10 lg:gap-16 items-center`}>
       <div className="lg:w-1/2">
-        <div className="w-12 h-12 rounded-xl bg-[#EEF2F9] text-[#1A3C70] flex items-center justify-center ring-1 ring-[#C9D5EA] mb-5">
-          <Icon className="w-5 h-5" />
+        <div className="flex items-center gap-4 mb-4">
+          <div className="w-12 h-12 flex-shrink-0 rounded-xl bg-[#EEF2F9] text-[#1A3C70] flex items-center justify-center ring-1 ring-[#C9D5EA]">
+            <Icon className="w-5 h-5" />
+          </div>
+          <h2 className="font-heading text-3xl md:text-4xl font-extrabold tracking-tight text-[#112854]">
+            {title}
+          </h2>
         </div>
-        <h2 className="font-heading text-3xl md:text-4xl font-extrabold tracking-tight text-[#112854] mb-4">
-          {title}
-        </h2>
         {description.map((para, i) => (
           <p key={i} className="text-[#334155] leading-7 mb-4">{para}</p>
         ))}

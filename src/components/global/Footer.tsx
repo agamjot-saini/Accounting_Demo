@@ -33,7 +33,7 @@ export default function Footer() {
               [FIRM_NAME]<span className="text-[#D4A843]">.</span>
             </Link>
             <p className="mt-3 text-sm text-[#64748B] leading-6">
-              Modern tax and accounting services for individuals and businesses across Ontario.
+              Professional tax and accounting services for individuals and businesses across Ontario.
             </p>
           </div>
 
