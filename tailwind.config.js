@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
       animation: {
-        marquee: 'marquee 30s linear infinite',
+        marquee: 'marquee 75s linear infinite',
       },
       keyframes: {
         marquee: {
           '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-20%)' },
+          '100%': { transform: 'translateX(-25%)' },
         },
       },
     },
